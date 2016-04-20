@@ -5,7 +5,7 @@
       <span class="card-title white-text">
         <%= @blog_post.title %>
       </span>
-      <i>by <%=@blog_post.author%></i>
+      <i>by <%=@blog_post.user.email%></i>
       <p>
         <%= @blog_post.blog_entry %>
       </p>
@@ -21,7 +21,7 @@
         Comments
       </span>
       <% @blog_post.comments.each do |comment| %>
-        <p><b><%=comment.author%></b> said:</p>
+        <p><b><%=comment.user.email%></b> said:</p>
         <p><%= comment.comment_entry%></p>
       <%end%>
     </div>
