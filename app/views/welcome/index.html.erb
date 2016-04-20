@@ -1,0 +1,28 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+<p>this is what I have set up so far</p>
+
+
+    <div class="row">
+      <% @recent_post.each do |recent_post| %>
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title"><%= recent_post.title%></span>
+              <i>by <%=recent_post.author%></i>
+              <p><%= recent_post.blog_entry %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+	<ul>
+		<li> </li>
+		<li></li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+	</ul>
+
+<p>this will be under everything on the welcome page</p>
