@@ -6,6 +6,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
 <body>
@@ -13,13 +14,17 @@
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo right">Logo</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+      <!-- http://materializecss.com/helpers.html -->
+      <ul id="nav-mobile" class="left hide-on-small-only">
+        <li> <% if user_signed_in? %>
+        <%= link_to 'New Blog post', new_blog_post_path ,  class: " btn btn-primary"  %>
+        <% end %>
+        </li>
         <li><div>
 	<% if user_signed_in? %>
+       <%= link_to "Your Posts", your_posts_path , class: " btn btn-primary" %>
      <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary" %>
+
      <% else %>
      <%= link_to "Log in", new_session_path(resource_name) %><br />
     <% end %>
@@ -39,6 +44,12 @@
 
 
 <%= yield %>
+
++  <script>
+ +    $(document).ready(function() {
+ +      $(".button-collapse").sideNav();
+ +    });
+ </script>
 
 </body>
 </html>

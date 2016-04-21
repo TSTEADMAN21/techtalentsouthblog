@@ -21,3 +21,57 @@ $primary-color: color("blue", "lighten-2") !default;
 body {
 	padding: 0 20px;
 }
+
+
+.nav-wrapper {
+	margin-top: 20px;
+}
+
+.nav-wrapper img {
+	max-height:100%;
+}
+
+.nav-wrapper ul {
+	line-height: inherit;
+}
+
+.container {
+	background-color: rgba(255,255,255,0.8);
+	margin-top:50px;
+	padding:25px;
+	border-radius: 20px;
+	width: 100%;
+}
+
+.sign {
+	
+}
+
+textarea {
+	height:10rem;
+	margin:20px 0;
+}
+
+.flow-text {
+	line-height: 100%;
+}
+
+.recent-post {
+	font-size: 15px;
+	line-height: 200%;
+	margin:auto;
+}
+
+.blog-entry {
+	text-indent: 1.5em;
+}
+
+
+.btn {
+	padding:0.3em 0.3em;
+}
+
+.page-footer {
+	margin-top: 30px;
+	margin-bottom:0;
+}
