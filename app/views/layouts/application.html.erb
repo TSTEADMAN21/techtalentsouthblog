@@ -12,60 +12,65 @@
 <body>
 
   <nav>
+
     <div class="nav-wrapper">
       <a href="#" class="brand-logo right">COLD</a>
+      <ul class="right show-on-medium-and-down">
+        <%= render 'nav' %>
+      </ul>
 
-
-
+      <ul id="nav-mobile" class="side-nav">
+        <%= render 'nav' %>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse">
+          <i class="material-icons">menu</i>
+      </a>
 
       <!-- http://materializecss.com/helpers.html -->
       <ul id="nav-mobile" class="left hide-on-small-only">
         <li> 
         <% if user_signed_in? %>
         <div class = "testbutton">
-        <%= link_to 'New Blog post', new_blog_post_path %>
+            <%= link_to 'New Blog post', new_blog_post_path %>
         </div>
         <% end %>
         </li>
+
         <li>
-        <div>
-  <% if user_signed_in? %>
-
-  <div class = "testbutton">
-       <%= link_to "Your Posts", your_posts_path  %>
-       </div>
-       <div class = "testbutton">
-     <%= link_to "Edit Profile", edit_user_registration_path%>
-      </div>
-     <% else %>
-     <div class = "testbutton">
-     <%= link_to "Log in", new_session_path(resource_name) %><br />
-     </div>
-    <% end %>
-
-    </div>
-      </li>
+        <% if user_signed_in? %>
+            <div class = "testbutton">
+              <%= link_to "Your Posts", your_posts_path  %>
+            </div>
+            <div class = "testbutton">
+              <%= link_to "Edit Profile", edit_user_registration_path%>
+            </div>
+  
+        <% else %>
+            <div class = "testbutton">
+                <%= link_to "Log in", new_session_path(resource_name) %><br />
+              </div>
+        <% end %>
+        </li>
       
         <li>
         <div>
-    <% if user_signed_in? %>
-    <div class = "testbutton">
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete%>
-      </div>
-    <% end %>
-      </div>
-      </li>
+        <% if user_signed_in? %>
+            <div class = "testbutton">
+                <%= link_to "Sign Out", destroy_user_session_path, method: :delete%>
+            </div>
+          <% end %>
+        </div>
+        </li>
       </ul>
-
     </div>
   </nav>
 
 <%= yield %>
 
-+  <script>
- +    $(document).ready(function() {
- +      $(".button-collapse").sideNav();
- +    });
+  <script>
+  $(document).ready(function() {
+      $(".button-collapse").sideNav();
+    });
  </script>
 
 </body>
