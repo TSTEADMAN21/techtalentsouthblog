@@ -14,13 +14,32 @@
  *= require_self
  */
  
+
+/*https://www.google.com/imgres?imgurl=http://i1.wp.com/30daysweater.com/wp-content/uploads/2014/07/cool-winter.jpg&imgrefurl=http://30daysweater.com/skin-tone-winter/&h=300&w=600&tbnid=r4MGPHRaar22WM:&tbnh=91&tbnw=183&docid=D0Rzh89YCNa6TM&usg=__C5JL77KKOa7u_HNFyf0p3lVXu68=&sa=X&ved=0ahUKEwjLlL_ui6PMAhVE5SYKHZPYC1MQ9QEIIDAA where the colors came from*/
+
 @import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
+$primary-color: color("light-blue", "lighten-2") !default;
+$secondary-color:color("teal", "darken-4") !default;
+$font-stack:    Helvetica, sans-serif;
+$font-color: #333;
+
+
 @import "materialize";
+
+/* normal comment http://stackoverflow.com/questions/18100650/how-to-set-a-background-image-in-rails-from-css */
+
+  @import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
 
 body {
 	padding: 0 20px;
-}
+	background-image: url(/assets/snowboarding.jpg);
+	background-size: cover;
+	}
+
+
+nav{
+	opacity: 0.8;
+}        
 
 
 .nav-wrapper {
@@ -48,7 +67,7 @@ body {
 }
 
 textarea {
-	height:10rem;
+
 	margin:20px 0;
 }
 
@@ -74,4 +93,42 @@ textarea {
 .page-footer {
 	margin-top: 30px;
 	margin-bottom:0;
+}
+
+.testbutton {
+		color:black;
+		padding:0 25px;
+		background: #ECECEC;
+        border-radius: 15px;
+        display: inline;
+        font-family: arial;
+        font-weight: bold;
+        color:#7f7f7f;
+        text-decoration: none;
+        text-shadow:0px 1px 0px #fff;
+        border:1px solid #a7a7a7;
+        width: 50px;
+        margin:0px auto;
+        margin-top:100px;
+        box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+        -webkit-transition:box-shadow 0.5s;}
+nav ul a {
+	color:blue;
+}
+nav ul a:hover
+{	background-color:transparent;
+	color:white;
+}
+nav ul a:visited{
+	color:#4fc3f7;
+}
+
+
+.testbutton:hover{
+	 box-shadow: 0px 2px 1px white inset, 0px -2px 20px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+}
+.testbutton:active{
+	 box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+        background:-webkit-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
+
 }

@@ -6,17 +6,24 @@
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-              <span class="card-title"><%=blog_post.author%></span>
+              <span class="card-title"><%=blog_post.title%></span>
               <i>by <%= link_to blog_post.user.name,  "/user_posts/#{blog_post.user.id}" %></i>
               <p><%= blog_post.blog_entry[0..250] %>...</p>
               <%= link_to 'Read More', blog_post %>
             </div>
             <div class="card-action">
                   <% if blog_post.user == current_user  %>
-              <%= link_to 'Show', blog_post %>
-              <%= link_to 'Edit', edit_blog_post_path(blog_post) %>
+              <button>
+                <%= link_to 'Show', blog_post %>
+              </button> 
+
+              <button>
+                  <%= link_to 'Edit', edit_blog_post_path(blog_post) %>
+              </button>
+              <button>
               <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %>
               <% end %>
+              </button>
             </div>
           </div>
         </div>

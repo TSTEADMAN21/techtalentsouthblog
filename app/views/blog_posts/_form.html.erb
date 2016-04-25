@@ -10,15 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+<div class ="topfield">
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
-
+  </div>
+<div class = "bottomfield" > 
   <div class="field">
     <%= f.label :blog_entry %><br>
     <%= f.text_area :blog_entry %>
+  </div>
   </div>
   <div class="actions">
     <%= f.submit "submit blog", :class => "btn btn-primary" %>

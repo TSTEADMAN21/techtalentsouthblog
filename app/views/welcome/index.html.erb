@@ -1,8 +1,9 @@
-<h1>Welcome#index</h1>
+
 <p>Find me in app/views/welcome/index.html.erb</p>
-<p>this is what I have set up so far</p>
 
 
+<h1 class="flow-text"> Welcome <% if user_signed_in? %><%=current_user.name%><%else%><%= "to Blog App"%><%end%> </h1>
+<p class="flow-text">
     <div class="row">
       <% @recent_post.each do |recent_post| %>
         <div class="col s12 m6">

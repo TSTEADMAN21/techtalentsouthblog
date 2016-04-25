@@ -1,3 +1,95 @@
 // Place all the styles related to the BlogPosts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// http://www.sanwebe.com/2013/01/40-css-buttons-from-codepen
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+.topfield{
+	background-image:url(/assets/coldguy.jpg);
+	background-size: 100% auto;
+	color:black;
+}
+
+.bottomfield {
+	background-image: url(/assets/dog_sled.jpg);
+	position:relative;
+	background-size:cover;
+	color:blue;
+	}
+
+
+
+.active
+{
+	color:black;
+}
+
+
+button {
+  width:100px;
+  height:35px;
+  display:block;
+  font-family:Arial, "Helvetica", sans-serif;
+  font-size:16px;
+  font-weight:bold;
+  color:#fff;
+  text-decoration:none;
+  text-transform:uppercase;
+  text-align:center;
+  text-shadow:1px 1px 0px #07526e;
+  padding-top:6px;
+  margin-left:auto;
+  margin-right:auto;
+  left:30px;
+  position:relative;
+  cursor:pointer;
+  border: none;
+  border-left:solid 1px #2ab7ec;
+  background-image: linear-gradient(bottom, rgb(14,137,182) 0%, rgb(22,179,236) 100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #07526e, 0px 10px 5px #999;
+}
+
+
+button .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+	color:black;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover{
+	color:black;
+}
+
+button:active {
+  top:3px;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 5px 3px #999;
+}
+.card .card-action a button:hover{
+	background-color:transparent;
+}
+
+button:before {
+  content:"1";
+  width:35px;
+  height:25px;
+  display:block;
+  position:absolute;
+  padding-top:10px;
+  top:0px;
+  margin-left:-37px;
+  font-size:16px;
+  font-weight:bold;
+  color:#8fd1ea;
+  text-shadow:1px 1px 0px #07526e;
+  border-right:solid 1px #07526e;
+  background-image: linear-gradient(bottom, rgb(10,94,125) 0%, rgb(14,139,184) 100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a, 0px 10px 5px #999 ;
+}
+
+button:active:before {
+  top:-3px;
+  box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a, 1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64, 6px 4px 2px #0b698b, 0px 10px 5px #999 ;
+}
