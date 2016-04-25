@@ -23,8 +23,9 @@
   </div>
   </div>
   <div class="actions">
-    <%= f.submit "submit blog", :class => "btn btn-primary" %>
+  <div class = "testbutton">
+    <%= f.submit "submit blog" %>
   </div>
-
+  </div>
   <%= f.hidden_field :user_id,value: current_user.id %>
 <% end %>

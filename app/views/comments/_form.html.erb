@@ -17,8 +17,10 @@
     <%= f.text_area :comment_entry %>
 
   </div>
-  <div class="actions">
-    <%= f.submit  "comment plz", :class => "btn btn-primary" %>
+  <div class="action">
+  <div class = "testbutton">
+    <%= f.submit  "comment plz" %>
+    </div>
   </div>
 
   <%= f.hidden_field :user_id,value: current_user.id %>
